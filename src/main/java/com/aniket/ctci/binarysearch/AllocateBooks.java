@@ -39,29 +39,29 @@ public class AllocateBooks {
         System.out.println(books(A, B));
     }
 
-    public static int books(int[] A, int B) {
+    public static int books(int[] P, int M) {
 
-        if(A == null || B < 1 || A.length < B) return -1;
+        if(P == null || M < 1 || P.length < M) return -1;
 
-        if(A.length == 1) return A[0];
+        if(P.length == 1) return P[0];
 
         int minPages = Integer.MAX_VALUE;
         int maxPages = 0;
         int ans = Integer.MAX_VALUE;
 
-        for(int i = 0; i < A.length; i++) {
-            maxPages += A[i];
-            if(A[i] < minPages) minPages = A[i];
+        for(int i = 0; i < P.length; i++) {
+            maxPages += P[i];
+            if(P[i] < minPages) minPages = P[i];
         }
 
-        if(B < 2) return maxPages;
+        if(M < 2) return maxPages;
 
         while (minPages < maxPages) {
             int mid = minPages + (maxPages - minPages) / 2;
-            boolean isPos = isPossible(A, B, mid);
+            boolean isPos = isPossible(P, M, mid);
             if(isPos) {
 
-                ans =Math.min(ans, mid);
+                ans = Math.min(ans, mid);
                 maxPages = mid;
 
             } else {
@@ -70,27 +70,27 @@ public class AllocateBooks {
             }
 
         }
-//        if(ans == Integer.MAX_VALUE) return -1;
+
         return ans;
 
 
     }
 
-    private static boolean isPossible(int[] A, int B, int numOfPages) {
+    private static boolean isPossible(int[] P, int M, int numOfPages) {
 
         int count = 1;
         int sum = 0;
 
-        for(int i = 0; i < A.length; i++) {
+        for(int i = 0; i < P.length; i++) {
 
-            if(A[i] > numOfPages) return false;
+            if(P[i] > numOfPages) return false;
 
-            if(( sum + A[i]) > numOfPages ) {
-                sum = A[i];
+            if(( sum + P[i]) > numOfPages ) {
+                sum = P[i];
                 count++;
-                if(count > B) return false;
+                if(count > M) return false;
             } else {
-                sum += A[i];
+                sum += P[i];
             }
         }
 
