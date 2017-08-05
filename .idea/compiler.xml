@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="DataStrictureAndAlgorithm" />
+        <module name="DSAndAlgo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.6">
       <module name="DataStrictureAndAlgorithm" target="1.8" />
+      <module name="DSAndAlgo" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
