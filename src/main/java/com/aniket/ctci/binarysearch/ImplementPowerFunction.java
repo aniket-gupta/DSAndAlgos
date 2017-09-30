@@ -7,7 +7,7 @@ public class ImplementPowerFunction {
 
      In other words, given x, n and d,
 
-     find (xn % d)
+     find (x^n % d)
 
      Note that remainders on division cannot be negative.
      In other words, make sure the answer you return is non negative.
