@@ -3,8 +3,9 @@ package com.aniket.ctci.arrayandstring;
 public class CompareVersionNumbers {
 
     /**
-     * Compare Version Numbers
-     * Compare two version numbers version1 and version2.
+     Compare Version Numbers
+
+     Compare two version numbers version1 and version2.
 
      If version1 > version2 return 1,
      If version1 < version2 return -1,
