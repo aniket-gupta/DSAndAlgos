@@ -15,9 +15,9 @@ public class OneWay {
     public boolean isOneWay(String str1, String str2) {
 
         if (Math.abs(str1.length() - str2.length()) > 1) {
-          return false;
+            return false;
         }
-        if(str1.length() == str2.length()) {
+        if (str1.length() == str2.length()) {
             return isEditReplace(str1, str2);
         } else if (str1.length() > str2.length()) {
             return isEditInsert(str1, str2);
@@ -27,16 +27,17 @@ public class OneWay {
 
     private boolean isEditInsert(String str1, String str2) {
 
-        int i = 0; int j = 0;
+        int i = 0;
+        int j = 0;
 
         while (i < str1.length() && j < str2.length()) {
-            if(str1.charAt(i) != str1.charAt(j)) {
-                if(i != j) {
+            if (str1.charAt(i) != str1.charAt(j)) {
+                if (i != j) {
                     return false;
                 }
                 i++;
-            }
-            else i++; j++;
+            } else i++;
+            j++;
         }
 
         return true;
@@ -48,7 +49,7 @@ public class OneWay {
 
         for (int i = 0; i < str1.length(); i++) {
             if (str1.charAt(i) != str2.charAt(i)) {
-                if(foundDiff) return false;
+                if (foundDiff) return false;
                 foundDiff = true;
             }
         }

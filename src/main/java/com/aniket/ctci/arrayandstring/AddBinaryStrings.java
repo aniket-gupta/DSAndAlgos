@@ -18,6 +18,7 @@ public class AddBinaryStrings {
     }
 
     public String addBinary(String a, String b) {
+
         if (a == null) return b;
         if (b == null) return a;
         if (a.length() < b.length()) {
