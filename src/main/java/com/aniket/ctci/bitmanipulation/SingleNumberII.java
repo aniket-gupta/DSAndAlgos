@@ -94,6 +94,11 @@ public class SingleNumberII {
      * Number that appear only once is present in variable firstTimeOccurence that is 2 here.
      */
 
+    public static void main(String[] args) {
+        int[] A = {1, 2, 4, 3, 3, 2, 2, 3, 1, 1};
+        System.out.println(new SingleNumberII().singleNumber(A));
+    }
+
     public int singleNumber(final int[] A) {
         int firstTimeOccurence = 0;
         int secondTimeOccurence = 0;
