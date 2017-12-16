@@ -48,6 +48,7 @@ public class InfixToPostfix {
         while (!stack.isEmpty()) {
             stringBuffer.append(stack.pop());
 
+
         }
 
         return stringBuffer.toString();
