@@ -26,8 +26,6 @@ public class GrayCode {
         ArrayList<Integer> integers = obj.grayCode(8);
         System.out.println(integers);
 
-        int num = 0 ^ (1 << 1);
-        System.out.println(num);
     }
 
 
