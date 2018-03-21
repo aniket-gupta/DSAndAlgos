@@ -1,19 +1,18 @@
 package com.aniket.ctci.hashing;
 
 import java.util.HashMap;
-import java.util.HashSet;
 
 public class LongestSubstringWithoutRepeat {
 
     /**
      * Given a string,
-     find the length of the longest substring without repeating characters.
-
-     Example:
-
-     The longest substring without repeating letters for "abcabcbb" is "abc", which the length is 3.
-
-     For "bbbbb" the longest substring is "b", with the length of 1.
+     * find the length of the longest substring without repeating characters.
+     * <p>
+     * Example:
+     * <p>
+     * The longest substring without repeating letters for "abcabcbb" is "abc", which the length is 3.
+     * <p>
+     * For "bbbbb" the longest substring is "b", with the length of 1.
      */
 
     public static void main(String[] args) {
@@ -24,29 +23,28 @@ public class LongestSubstringWithoutRepeat {
 
     public int lengthOfLongestSubstring(String A) {
 
-       int start = 0;
-       int maxLen = -1;
+        int start = 0;
+        int maxLen = -1;
 
-       HashMap<Character, Integer> map = new HashMap<>();
-       for (int i = 0; i < A.length(); i++) {
-           char c = A.charAt(i);
-           if (map.containsKey(c) && map.get(c) != 0) {
+        HashMap<Character, Integer> map = new HashMap<>();
+        for (int i = 0; i < A.length(); i++) {
+            char c = A.charAt(i);
+            if (map.containsKey(c) && map.get(c) != 0) {
 
-               while (A.charAt(start) != c) {
-                   map.remove(A.charAt(start));
-                   start++;
-               }
-               start++;
-               map.put(c, 1);
+                while (A.charAt(start) != c) {
+                    map.remove(A.charAt(start));
+                    start++;
+                }
+                start++;
+                map.put(c, 1);
 
-           } else {
-               maxLen = Math.max(maxLen, i - start + 1);
-               map.put(c, 1);
-           }
-       }
+            } else {
+                maxLen = Math.max(maxLen, i - start + 1);
+                map.put(c, 1);
+            }
+        }
 
-       return maxLen == -1 ? 1 : maxLen;
-
+        return maxLen == -1 ? 1 : maxLen;
 
 
     }
