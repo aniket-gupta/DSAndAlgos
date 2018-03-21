@@ -1,24 +1,21 @@
 package com.aniket.ctci.hashing;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.HashSet;
 
 public class WindowString {
 
     /**
      * t when the count of a character C in T is N, then the count of C in minimum window in S should be at least N.
-
-     Example :
-
-     S = "ADOBECODEBANC"
-     T = "ABC"
-     Minimum window is "BANC"
-
-     Note:
-     If there is no such window in S that covers all characters in T, return the empty string ''.
-     If there are multiple such windows, return the first occurring minimum window ( with minimum start index ).
+     * <p>
+     * Example :
+     * <p>
+     * S = "ADOBECODEBANC"
+     * T = "ABC"
+     * Minimum window is "BANC"
+     * <p>
+     * Note:
+     * If there is no such window in S that covers all characters in T, return the empty string ''.
+     * If there are multiple such windows, return the first occurring minimum window ( with minimum start index ).
      */
 
     public static void main(String[] args) {
