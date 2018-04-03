@@ -1,7 +1,5 @@
 package com.aniket.ctci.tree;
 
-import apple.laf.JRSUIUtils;
-
 import java.util.*;
 
 public class LevelOrderTraversal {
@@ -27,7 +25,7 @@ public class LevelOrderTraversal {
 
                 TreeNode n = queue.remove();
 
-                System.out.print(" " + n.data);
+                System.out.print(" " + n.val);
                 if (n.left != null) queue.add(n.left);
                 if (n.right != null) queue.add(n.right);
                 level--;
@@ -58,7 +56,7 @@ public class LevelOrderTraversal {
         }
 
         while (!stack.isEmpty()) {
-            System.out.print(" " + stack.pop().data);
+            System.out.print(" " + stack.pop().val);
         }
 
     }

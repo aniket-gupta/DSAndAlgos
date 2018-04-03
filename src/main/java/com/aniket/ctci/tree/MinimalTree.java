@@ -23,7 +23,7 @@ public class MinimalTree {
     public static void inorderTraversal(TreeNode root) {
         if(root != null) {
             inorderTraversal(root.left);
-            System.out.print(" " + root.data);
+            System.out.print(" " + root.val);
             inorderTraversal(root.right);
         }
     }

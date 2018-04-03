@@ -2,7 +2,6 @@ package com.aniket.ctci.tree;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 /**
  * Created by AnGupta on 5/11/17.
@@ -15,7 +14,7 @@ public class DiagonalSum {
 
             int oldSum = (map.get(lineNo) == null) ? 0 : map.get(lineNo);
 
-            map.put(lineNo, oldSum + root.data);
+            map.put(lineNo, oldSum + root.val);
 
             diagonalSum(root.right, lineNo, map);
         }

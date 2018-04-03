@@ -8,12 +8,12 @@ public class IsBinarySearchTree {
     public static boolean isBinarySearchTree(TreeNode root, Integer min, Integer max) {
         if(root == null) return true;
 
-        if( (min != null && root.data <= min ) ||
-                (max != null && root.data > max)) {
+        if( (min != null && root.val <= min ) ||
+                (max != null && root.val > max)) {
             return false;
         }
 
-        if(!isBinarySearchTree(root.left, min, root.data) || !isBinarySearchTree(root.right, root.data, max)) {
+        if(!isBinarySearchTree(root.left, min, root.val) || !isBinarySearchTree(root.right, root.val, max)) {
             return false;
         }
         return true;

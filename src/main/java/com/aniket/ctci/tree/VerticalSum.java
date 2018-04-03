@@ -15,7 +15,7 @@ public class VerticalSum {
             verticalSum(root.left, hd - 1, map);
 
             int prevSum = (map.get(hd) == null) ? 0 : map.get(hd);
-            map.put(hd, prevSum + root.data);
+            map.put(hd, prevSum + root.val);
 
             verticalSum(root.right, hd + 1, map);
 

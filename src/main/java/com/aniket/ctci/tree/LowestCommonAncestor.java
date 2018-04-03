@@ -7,7 +7,7 @@ public class LowestCommonAncestor {
             return null;
         }
 
-        if(root.data == n1.data || root.data == n2.data) {
+        if(root.val == n1.val || root.val == n2.val) {
             return root;
         }
 
@@ -48,8 +48,8 @@ public class LowestCommonAncestor {
 
 
         TreeNode x = LCA(root,n1,n2);
-        System.out.println("Lowest Common Ancestor ("+n1.data+", "+ n2.data +" ) is " + x.data);
+        System.out.println("Lowest Common Ancestor ("+n1.val +", "+ n2.val +" ) is " + x.val);
         x = LCA(root,n2,n3);
-        System.out.println("Lowest Common Ancestor ("+n2.data+", "+ n3.data +" ) is " + x.data);
+        System.out.println("Lowest Common Ancestor ("+n2.val +", "+ n3.val +" ) is " + x.val);
     }
 }

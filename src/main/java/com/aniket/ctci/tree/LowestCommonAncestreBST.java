@@ -5,9 +5,9 @@ public class LowestCommonAncestreBST {
     public static TreeNode LCABST(TreeNode root, TreeNode n1, TreeNode n2) {
        while (root != null) {
 
-           if(root.data > n1.data && root.data > n2.data) {
+           if(root.val > n1.val && root.val > n2.val) {
                root = root.left;
-           } else if (root.data < n1.data && root.data < n2.data) {
+           } else if (root.val < n1.val && root.val < n2.val) {
                root = root.right;
            } else {
                return root;
@@ -22,9 +22,9 @@ public class LowestCommonAncestreBST {
         if(root == null) {
             return  null;
         }
-        if(root.data > n1.data && root.data > n2.data) {
+        if(root.val > n1.val && root.val > n2.val) {
             return  LCA_BST_RECUR(root.left, n1, n2);
-        } else if (root.data < n1.data && root.data <n2.data) {
+        } else if (root.val < n1.val && root.val <n2.val) {
             return LCA_BST_RECUR(root.right, n1, n2);
         } else {
             return root;
@@ -44,11 +44,11 @@ public class LowestCommonAncestreBST {
 
 
         System.out.println("Recursive-Lowest Common Ancestor of Nodes "
-                + n1.data + " and " + n2.data + " is : "
-                + LCA_BST_RECUR(root, n1, n2).data);
+                + n1.val + " and " + n2.val + " is : "
+                + LCA_BST_RECUR(root, n1, n2).val);
 
         TreeNode x = LCABST(root, n1, n2);
         System.out.println("Iterative-Lowest Common Ancestor of Nodes "
-                + n1.data + " and " + n2.data + " is : " + x.data);
+                + n1.val + " and " + n2.val + " is : " + x.val);
     }
 }

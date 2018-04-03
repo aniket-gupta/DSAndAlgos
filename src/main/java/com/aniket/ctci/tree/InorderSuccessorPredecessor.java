@@ -11,7 +11,7 @@ public class InorderSuccessorPredecessor {
 
         if (root != null) {
 
-            if (root.data == val) {
+            if (root.val == val) {
 
                 // predecessor -> rigt most node in left subtree
                 if (root.left != null) {
@@ -19,7 +19,7 @@ public class InorderSuccessorPredecessor {
                     while (t.right != null) {
                         t = t.right;
                     }
-                    predecessor = t.data;
+                    predecessor = t.val;
                 }
 
                 // successor -> left most node in right subtree
@@ -29,13 +29,13 @@ public class InorderSuccessorPredecessor {
                         t = t.right;
                     }
 
-                    successor = t.data;
+                    successor = t.val;
                 }
-            } else if (root.data > val) {
-                successor = root.data;
+            } else if (root.val > val) {
+                successor = root.val;
                 successorPredecessorBST(root.left, val);
-            } else if (root.data < val) {
-                predecessor = root.data;
+            } else if (root.val < val) {
+                predecessor = root.val;
                 successorPredecessorBST(root.right, val);
             }
         }
